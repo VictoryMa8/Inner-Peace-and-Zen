@@ -4,19 +4,49 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Journal | Inner Peace and Zen</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style1.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="page1.html">Journal</a></li>
-                <li><a href="page2.html">About</a></li>
-                <li><a href="page3.html">Contact</a></li>
-            </ul>
+        <div id="page1">
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="page1.html">Journal</a></li>
+                    <li><a href="page2.html">About</a></li>
+                    <li><a href="page3.html">Contact</a></li>
+                </ul>
+            </div>
+            <h1>Your Personal Journal</h1>
+            <div id="new-entry">
+                <div class="info">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="info">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time">
+                </div>
+                <div class="info">
+                    <label for="weather">Weather:</label>
+                    <select id="weather">
+                        <option value="sunny">Sunny</option>
+                        <option value="partly-cloudy">Partly Cloudy</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="rainy-snowy">Rainy or Snowy</option>
+                    </select>
+                </div>
+                <textarea id="journal" placeholder="Write your thoughts here..."></textarea>
+                <button id="save" onclick="saveEntry()">Save Entry</button>
+            </div>
+            <div id="prev">
+                <h2>Previous Entries</h2>
+                <button class="btn" onclick="toggleEntries()">Show / Hide Previous Entries</button>
+            </div>
+            <div id="entries"></div>
         </div>
+        <script src="script1.js"></script>
     </body>
 </html>
